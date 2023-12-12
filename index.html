@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Star</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/images/hi-logo.svg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./assets/css/style.css" id="stylesheet">
+</head>
+<body>
+  <!-- ============================   Navbar =========================== -->
+    <div class="overlay" style="display: none;"></div>
+
+    <nav class="flex-center">
+        <div class="container flex-bw" id="navbar">
+            <div class="logo">
+              <a href="#">
+                <img src="./assets/images/logo.svg" alt="" />
+              </a>
+            </div>
+            <ul class="nav-items flex-al-c">
+              <li>
+                <a href="#hero" class="link-active" data-i18n="home">Home</a>
+              </li>
+              <li>
+                <a href="#about" data-i18n="about">About</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="services">Services</a>
+              </li>
+              <li>
+                <a href="#contact" data-i18n="contact">Contact</a>
+              </li>
+            </ul>
+            <div class="nav-actions flex-al-c">
+              <div class="select-menu">
+                  <div class="select-btn flex-al-c">
+                    <span data-i18n="lang">English</span>
+                    <img src="./assets/images/angle-right-black.svg" alt="" class="arrowDown" />
+                  </div>
+                  <ul class="options flex-bw flex-col hide_lang_options" >
+                    <li class="option" onclick='handleLanguage("ar")'>
+                        <a href="" data-i18n="arabic">Arabic</a>
+                    </li>
+                    <li class="option" onclick='handleLanguage("en")'>
+                        <a href="" data-i18n="english">English</a>
+                    </li>
+                  </ul>
+              </div>
+              <div class="phone-Number flex-center">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>0555333389</span>
+              </div>
+              <img src="./assets/images/menu-burger.svg" alt="" id="menu-icon">
+            </div>
+            <div id="mobile-navbar" class="nav-items-mobile">
+              <ul>
+              <img src="./assets/images/close-icon.svg" id="close-icon"  alt="">
+              <li>
+                <a href="#hero" class="link-active" data-i18n="home">Home</a>
+              </li>
+              <li>
+                <a href="#about" data-i18n="about">About</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="services">Services</a>
+              </li>
+              <li>
+                <a href="#contact" data-i18n="contact">Contact</a>
+              </li>
+              <div class="phone-Number flex-center">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>0555333389</span>
+              </div>
+              </ul>
+            </div>
+        </div>
+    </nav>
+  <!-- ============================== Header =========================== -->
+    <header id="hero">
+      <div class="container">
+        <img src="./assets/images/truck.png" alt="" class="truck-img" />
+        <div class="container">
+          <div class="header-content">
+            <p data-i18n="hero_description" id="hero-description">
+            Deliver Your Goods To Any Place At The Exact Time And Manner With Our High Quality Services
+            </p>
+            <ul>
+              <li data-i18n="hero_li_1">Innovation</li>
+              <li data-i18n="hero_li_2">Efficiency</li>
+              <li data-i18n="hero_li_3">Excellence</li>
+              <li data-i18n="hero_li_4">Professionalism</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+  <!-- ============================= About Us ========================== -->
+    <section id="about">
+    <div class="container about-container">
+          <div class="main-section-title">
+              <h1 data-i18n="about_main_title">About histar</h1>
+          </div>
+        <div class="about-content flex-bw">
+          <div class="about-content-info flex-col">
+            <div class="description">
+              <p data-i18n="about_description">High Star Logistics Company is a limited liability company established in 2023 in Riyadh. It aims to provide logistical services to companies, factories, and government departments to help them with transportation and logistical means in modern, professional ways . We provide comprehensive logistics solutions with a reduced cost and seek to build strong relationships with our customers through a work team that has experience, competence and skill in the logistics field.</p>
+            </div>
+            <div>
+              <h3 data-i18n="our_message">Our message</h3>
+              <p data-i18n="our_message_description">Constantly striving to implement the necessary initiatives to achieve the future vision and raise the work efficiency of our partners.</p>
+            </div>
+
+            <div>
+              <h3 data-i18n="our_vision">Our vision</h3>
+              <p data-i18n="our_vision_description">We occupy a high leadership position in the Kingdom and the Arabian Gulf as a company that provides full services and harnesses its energies and resources to serve its clientsand all its partners.</p>
+            </div>
+
+          </div>
+          <div class="about-content-img">
+              <img src="./assets/images/about-img.png" alt="">
+          </div>
+        </div>
+    </div>
+    </section>
+  <!-- ============================= Services ========================== -->
+    <section id="services">
+      <div class="container services-container">
+          <div class="main-section-title">
+              <h1 data-i18n="services">Services</h1>
+          </div>
+          <div class="swiper mySwiper services_titles">
+                <div class="swiper-wrapper services-bar"></div>
+                <div class="swiper-pagination"></div>
+          </div>
+          <div class="service-content"></div>
+      </div>
+    </section>
+  <!-- ============================= Contact =========================== -->
+    <section id="contact">
+      <div class="container">
+          <div class="main-section-title">
+              <h1 data-i18n="contact_main_title">Contact Us</h1>
+          </div>
+          <div class="contact-content flex-bw">
+            <div class="contact-info flex-col">
+              <div>
+                <h3 data-i18n="email">Email Address</h3>
+                <p>support@hsl.sa</p>
+              </div>
+              <div>
+                <h3 data-i18n="number">Contact number</h3>
+                <p>0555333389</p>
+              </div>
+              <div>
+                <h3 data-i18n="CR">C.R</h3>
+                <p>1010914523</p>
+              </div>
+              <div>
+                <h3 data-i18n="Address">Address</h3>
+                <p data-i18n="address_place">Riyadh - gharnada - khaled ibn Alwaled.</p>
+              </div>
+            </div>
+            <div  class="form flex-col">
+              <div class="buttons flex-al-c">
+                <button class="btn" id="support-btn" data-i18n="support" >Support</button>
+                <button class="btn btn-primary flex-center" id="sales-btn" data-i18n="sales">Sales</button>
+              </div>
+              <div class="select select">
+                <div class="select-serve-input select-input flex-center" onclick="getServicesSelect()">
+                  <span data-i18n="service">Service</span>
+                  <img src="./assets/images/angle-right-gray.svg" alt="">
+                </div>
+                <ul class="select-services-options select-options toggle-options"></ul>
+              </div>
+              <div class="inputs flex-al-c">
+                <input type="text" placeholder="Name" id="name-input" >
+                <input type="text" placeholder="Number" id="number-input">
+              </div>
+              <input type="email" class="email" placeholder="Email" id="email-input">
+              <textarea name="textarea" placeholder="Message" id="message-input"></textarea>
+              <button data-i18n="send" class="btn-submit flex-center">Send</button>
+            </div>
+          </div>
+      </div>
+    </section>
+  <!-- =============================== Map ============================= -->
+    <section class="location-map" style=" position: relative; z-index: -6;">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.932370760421!2d46.7557348!3d24.797769199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efe6e1b12bd4b%3A0x15b1d529399258c9!2z2LTYp9ix2Lkg2KPYqNmKINis2LnZgdixINin2YTZhdmG2LXZiNix2Iwg2LrYsdmG2KfYt9ip2Iwg2KfZhNix2YrYp9i2IDEzMjQy2Iwg2KfZhNiz2LnZiNiv2YrYqQ!5e0!3m2!1sar!2s!4v1701534071258!5m2!1sar!2s" width="100%" height="409px" style="border:0; margin-bottom:-20px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  <!-- ============================== Footer ============================ -->
+  <!--======== Start Truks ========= -->
+    <div style="position: relative; z-index: -3;">
+      <div class="truks">
+      <img src="./assets/images/truck-1.svg" alt="" class="img-1">
+      <img src="./assets/images/truck-2.svg" alt="" class="img-2">
+      <img src="./assets/images/truck-3.svg" alt="" class="img-3">
+      <img src="./assets/images/truck-1.svg" alt="" class="img-1">
+      <img src="./assets/images/truck-2.svg" alt="" class="img-2">
+      <img src="./assets/images/truck-3.svg" alt="" class="img-3">
+      <img src="./assets/images/truck-1.svg" alt="" class="img-1">
+      <img src="./assets/images/truck-2.svg" alt="" class="img-2">
+      <img src="./assets/images/truck-3.svg" alt="" class="img-3">
+      <img src="./assets/images/truck-1.svg" alt="" class="img-1">
+      <img src="./assets/images/truck-2.svg" alt="" class="img-2">
+      <img src="./assets/images/truck-3.svg" alt="" class="img-3">
+    </div>
+    </div>
+  <!--======== End Truks =========== -->
+    <footer>
+      <div class="container">
+      <div class="row-one flex-col">
+          <div class="logo">
+              <a href="#">
+                <img src="./assets/images/footer-logo.svg" alt="" />
+              </a>
+          </div>
+          <ul class="footer-items flex-al-c">
+              <li>
+                <a href="#" data-i18n="home">Home</a>
+              </li>
+              <li>
+                <a href="#services" data-i18n="services">Services</a>
+              </li>
+              <li>
+                <a href="#contact" data-i18n="contact">Contact</a>
+              </li>
+              <li>
+                <a href="#about" data-i18n="about">About</a>
+              </li>
+          </ul>
+      </div>
+      <div class="row-two flex-bw">
+        <p>COPYRIGHT © 2023 Histar, ALL RIGHTS RESERVED</p>
+        <div class="social-media-links flex-al-c">
+            <a href=""><img src="./assets/images/instagram.svg" alt=""></a>
+            <a href=""><img src="./assets/images/facebook.svg" alt=""></a>
+            <a href=""><img src="./assets/images/whatsapp.svg" alt=""></a>
+        </div>
+        <div class="privacy-links">
+            <a href="#" data-i18n="policy">Privacy Policy</a> .
+            <a href="#" data-i18n="terms_conditions">Terms & Conditions</a> . <a href="#" data-i18n="security">Security</a>
+        </div>
+      </div>
+      </div>
+    </footer> 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+    </script>
+    <script src="./assets/js/translations.js"></script>
+    <script src="./assets/js/services.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
